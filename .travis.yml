@@ -4,9 +4,15 @@ language: python
 # Faz a instalação com Sudo, para ter privilégio de Super Usuário.
 sudo: required
 
+python:
+  - "3.8"
+  - "3.9"
+  - "3.9-dev"  # 3.9 development branch
+  - "nightly"  # nightly build
+
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
-  - pip install flask
+  - pip install -r requirements.txt
 
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.
 script:
